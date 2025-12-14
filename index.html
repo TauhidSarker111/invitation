@@ -1,108 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>Digital Invitation</title>
+<title>বিজয় দিবস ২০২৫ আমন্ত্রণপত্র</title>
 
 <style>
 body{
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    font-family: 'SolaimanLipi', Arial, sans-serif;
+    background: linear-gradient(to right, #ffe5d9, #ffcad4);
     text-align: center;
     padding: 30px;
 }
+
 .input-box{
     background: white;
-    padding: 20px;
-    max-width: 400px;
+    padding: 25px;
+    max-width: 500px;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
+
 input{
-    padding: 10px;
-    width: 80%;
-}
-button{
-    padding: 10px 20px;
+    padding: 12px;
+    width: 85%;
+    font-size: 16px;
     margin-top: 10px;
-    background: #ff6b6b;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button{
+    padding: 12px 25px;
+    margin-top: 15px;
+    font-size: 16px;
+    background: #00703c;
     color: white;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
+button:hover{
+    background: #00532d;
+}
+
 .card{
     display: none;
-    background: white;
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 15px;
+    background: #ffffff;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: left;
+    line-height: 1.6;
+    position: relative;
 }
+
+.card img{
+    width: 80px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.card h2{
+    text-align: center;
+    color: #00703c;
+    margin-bottom: 20px;
+}
+
 .name{
-    font-size: 26px;
-    color: #e63946;
+    font-size: 24px;
+    color: #d62828;
     font-weight: bold;
+}
+
+p{
+    font-size: 18px;
+}
+
+.share{
+    margin-top: 20px;
+    text-align: center;
 }
 .share a{
     display: inline-block;
     margin: 5px;
-    padding: 8px 12px;
+    padding: 10px 15px;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
 }
 .whatsapp{ background:#25D366; }
 .facebook{ background:#1877f2; }
 .copy{ background:#555; }
+
+@media (max-width: 768px){
+    .card, .input-box{
+        width: 90%;
+        padding: 20px;
+    }
+    .card img{
+        width: 60px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <div class="input-box">
-    <h2>Enter Your Name</h2>
-    <input type="text" id="username" placeholder="Your Name">
+    <h2>আপনার নাম লিখুন</h2>
+    <input type="text" id="username" placeholder="আপনার নাম লিখুন">
     <br>
-    <button onclick="generateCard()">Generate Invitation</button>
+    <button onclick="generateCard()">আমন্ত্রণ দেখান</button>
 </div>
 
 <div class="card" id="card">
-    <h2>🎉 You're Invited 🎉</h2>
-    <p>Dear <span class="name" id="showName"></span>,</p>
-    <p>You are invited to our special event</p>
-    <p>📅 25 December 2025</p>
-    <p>📍 Dhaka</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Government_Seal_of_Bangladesh.svg" alt="বাংলাদেশ সরকার সীল">
+    <h2>১৬ই ডিসেম্বর — বিজয় দিবস ২০২৫</h2>
+    <p>প্রিয় <span class="name" id="showName"></span>,</p>
+    <p>১৬ই ডিসেম্বর বাংলাদেশের বিজয় দিবস—বাঙালির অহংকারের দিন। স্বাধীনতা অর্জনের মহান চেতনা, বীর শহীদদের আত্মত্যাগের প্রতি গভীর শ্রদ্ধা নিবেদন এবং মুক্তিযুদ্ধের ইতিহাস নতুন প্রজন্মের মাঝে ছড়িয়ে দেওয়ার উদ্দেশ্যে মহান বিজয় দিবস ২০২৫ যথাযোগ্য মর্যাদা ও উৎসবমুখর পরিবেশে উদযাপনের লক্ষ্যে উপজেলা প্রশাসন, কালীগঞ্জ, গাজীপুর কর্তৃক নানাবিধ কর্মসূচি গ্রহণ করা হয়েছে।</p>
+    <p>মহান বিজয় দিবস উপলক্ষে আয়োজিত সকল অনুষ্ঠানে আপনার সশরীরে উপস্থিতি আমাদের সম্মানিত করবে।</p>
+    <p><strong>এ.টি.এম কামরুল ইসলাম</strong><br>
+    উপজেলা নির্বাহী অফিসার<br>
+    কালীগঞ্জ, গাজীপুর</p>
 
     <div class="share">
+        <h3>আমন্ত্রণ শেয়ার করুন</h3>
         <a class="whatsapp" id="wa" target="_blank">WhatsApp</a>
         <a class="facebook" id="fb" target="_blank">Facebook</a>
-        <a class="copy" onclick="copyLink()">Copy Link</a>
+        <a class="copy" onclick="copyLink()">লিঙ্ক কপি করুন</a>
     </div>
 </div>
 
 <script>
 function generateCard(){
     let name=document.getElementById("username").value;
-    if(name==""){ alert("Enter your name"); return; }
+    if(name==""){ alert("অনুগ্রহ করে নাম লিখুন"); return; }
 
     let url=window.location.origin+window.location.pathname+"?name="+encodeURIComponent(name);
     window.history.pushState({},'',url);
     showCard(name);
 }
+
 function showCard(name){
     document.getElementById("showName").innerText=name;
     document.getElementById("card").style.display="block";
 
     document.getElementById("wa").href=
-    "https://wa.me/?text="+encodeURIComponent("Invitation link: "+window.location.href);
+    "https://wa.me/?text="+encodeURIComponent("আপনাকে আমন্ত্রণ জানানো হল! লিঙ্ক: "+window.location.href);
 
     document.getElementById("fb").href=
     "https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(window.location.href);
 }
+
 function copyLink(){
     navigator.clipboard.writeText(window.location.href);
-    alert("Link copied");
+    alert("লিঙ্ক কপি করা হয়েছে!");
 }
+
+// Auto-load if name exists in URL
 let params=new URLSearchParams(window.location.search);
 if(params.get("name")) showCard(params.get("name"));
 </script>
